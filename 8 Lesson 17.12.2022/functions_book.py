@@ -24,7 +24,6 @@ def view_conts():
     print(tel_dir)
 
 
-
 #Удаление контакта
 def del_cont(x):
     tel_dir = pd.read_csv('tel_dir.csv')
