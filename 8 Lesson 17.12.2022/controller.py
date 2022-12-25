@@ -7,7 +7,6 @@ CHOICE_VIEV_BOOK = 3
 CHOICE_DEL_CONTACT = 4
 
 
-
 def func():
     a = input.number_func()
     if a == CHOICE_ADD_CONTACT:

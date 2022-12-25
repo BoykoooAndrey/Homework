@@ -20,14 +20,6 @@ def add_label():
     label_1.pack()
 
 
-list = []
-
-
-def request():
-    e = tk.Entry(win)
-    e.pack()
-    btn2 = tk.Button(win, text="Сохранить", command=list.append(e.get()))
-    btn2.pack()
 
 
 print(list)
