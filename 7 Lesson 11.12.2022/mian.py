@@ -125,10 +125,10 @@ def view_book():
     btn_exit_fviev.place(relwidth=1, relheight=1, relx=0, rely=0)
     view_conts()
 
-# Функция выхода из View book
+# Функция выхода из View book, Del, Find
 
 
-def exit_from_view():
+def exit_from_view_del_find():
     def del_view():
         for widgets in frame_working_area.winfo_children():
             widgets.place_forget()
@@ -159,17 +159,6 @@ def del_cont():
         widgets.place_forget()
     view_conts()
 
-# Функция выхода из Del
-
-
-def exit_from_del():
-    def del_view():
-        for widgets in frame_working_area.winfo_children():
-            widgets.place_forget()
-        for widgets in frame_navigation.winfo_children():
-            widgets.place_forget()
-    del_view()
-    return_menu()
 
 # Функция вызова меню поиска
 def menu_find():
@@ -216,15 +205,7 @@ def search_cont():
                                      )
                 label_i_j.place(relwidth=0.2, relheight=0.04,
                                 relx=0+(j*0.2), rely=0+(i*0.04))
-# Функция выхода из Find
-def exit_from_find():
-    def del_view():
-        for widgets in frame_working_area.winfo_children():
-            widgets.place_forget()
-        for widgets in frame_navigation.winfo_children():
-            widgets.place_forget()
-    del_view()
-    return_menu()
+
 
 # Создание окна
 win = tk.Tk()
@@ -307,21 +288,21 @@ btn_exit_fentry = tk.Button(
 btn_view_book = tk.Button(
     frame_navigation, text="View contact's", command=view_book)
 btn_exit_fviev = tk.Button(
-    frame_navigation, text="Back", command=exit_from_view)
+    frame_navigation, text="Back", command=exit_from_view_del_find)
 #
 btn_del_menu = tk.Button(
     frame_navigation, text="Delet contact", command=menu_del)
 btn_del_cont = tk.Button(
     frame_navigation, text="Delet", command=del_cont)
 btn_exit_fdel = tk.Button(
-    frame_navigation, text="Back", command=exit_from_del)
+    frame_navigation, text="Back", command=exit_from_view_del_find)
 #
 btn_search_cont = tk.Button(
     frame_navigation, text="Find contact", command=menu_find)
 btn_find_cont = tk.Button(
     frame_navigation, text="Search", command=search_cont)
 btn_exit_ffind = tk.Button(
-    frame_navigation, text="Back", command=exit_from_find)
+    frame_navigation, text="Back", command=exit_from_view_del_find)
 
 list_id = []
 return_menu()
